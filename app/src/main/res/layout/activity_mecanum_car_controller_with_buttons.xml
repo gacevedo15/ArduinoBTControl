@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!-- LinearLayout una barra de navegación, la cual tendrá un botón de ir atras y el nombre de la activity -->
+    <LinearLayout
+            android:id="@+id/linearLayoutNavBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/cardview_dark_background"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:onClick="onBack"/>
+
+        <TextView
+                android:id="@+id/tvActivityName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Car Controller with Buttons"
+                android:textSize="23dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="20dp"/>
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/AVSwitchONOFF"
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:lottie_rawRes="@raw/switchon"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutNavBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <LinearLayout
+            android:id="@+id/driftRotateLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/AVSwitchONOFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="100dp"
+            android:gravity="center">
+
+        <Button
+                android:id="@+id/btnRotateClockwise"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="↻"
+                android:onClick="onRotateClockwise"/>
+
+        <Button
+                android:id="@+id/btnDriftLeft"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="Drift Left"
+                android:onClick="onDriftLeft"/>
+
+        <Button
+                android:id="@+id/btnDriftRight"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="Drift Right"
+                android:onClick="onDriftRight"/>
+
+        <Button
+                android:id="@+id/btnRotateCounterClockwise"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="↺"
+                android:onClick="onRotateCounterClockwise"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/upLeftUpUpRightLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/driftRotateLinearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center">
+
+        <Button
+                android:id="@+id/btnUpLeft"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="↖"
+                android:onClick="onUpLeft"/>
+
+        <Button
+                android:id="@+id/btnUp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="↑"
+                android:onClick="onUp"/>
+
+        <Button
+                android:id="@+id/btnUpRight"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="↗"
+                android:onClick="onUpRight"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/leftAutoRightLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/upLeftUpUpRightLinearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center">
+
+        <Button
+                android:id="@+id/btnLeft"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="←"
+                android:onClick="onLeft"/>
+
+        <!-- Placeholder for the car image or other content -->
+        <Button
+                android:id="@+id/btnAuto"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="Auto"
+                android:onClick="onAuto"/>
+
+        <Button
+                android:id="@+id/btnRight"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="→"
+                android:onClick="onRight"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/downLeftDownDownRightLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/leftAutoRightLinearLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center">
+
+        <Button
+                android:id="@+id/btnDownLeft"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="↙"
+                android:onClick="onDownLeft"/>
+
+        <Button
+                android:id="@+id/btnDown"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="↓"
+                android:onClick="onDown"/>
+
+        <Button
+                android:id="@+id/btnDownRight"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="↘"
+                android:onClick="onDownRight"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
