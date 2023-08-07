@@ -16,6 +16,7 @@ class MainMenu : AppCompatActivity() {
 
     }
 
+    // This function is called when the user taps the "Car Controller with Buttons" button
     fun onCarControllerWithButtons(view: View) {
         val intent = Intent(this, CarControllerWithButtons::class.java)
         startActivity(intent)
