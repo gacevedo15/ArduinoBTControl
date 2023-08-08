@@ -17,9 +17,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/arduinobtcontrollogo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/arduinobtcontrollogo"
         android:supportsRtl="true"
         android:theme="@style/Theme.MecanumCarBTControl"
         tools:targetApi="31">
@@ -38,11 +38,6 @@
             android:name=".MainMenu"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="true" />
-        <activity
-            android:name=".BluetoothConnect"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:exported="true">
-        </activity>
         <activity
             android:name=".CarControllerWithButtons"
             android:theme="@style/Theme.AppCompat.NoActionBar"
