@@ -1,6 +1,6 @@
-# ArduinoBTControl
+<h1 align="center">Arduino BT Control</h1>
 
-ArduinoBTControl is an Android application designed to provide a comprehensive and adaptable solution for controlling Arduino projects via Bluetooth. This app empowers you to control a wide range of Arduino-based devices, offering various control options tailored to the specific requirements of your project. With support for different control modes and the flexibility to accommodate diverse project needs, ArduinoBTControl is your go-to tool for wireless control of Arduino projects.
+<h3>ArduinoBTControl is an Android application designed to provide a comprehensive and adaptable solution for controlling Arduino projects via Bluetooth. This app empowers you to control a wide range of Arduino-based devices, offering various control options tailored to the specific requirements of your project. With support for different control modes and the flexibility to accommodate diverse project needs, ArduinoBTControl is your go-to tool for wireless control of Arduino projects.</h3>
 
 ## Key Features
  - Bluetooth Connectivity: Establish a seamless Bluetooth connection between your Android device and your Arduino board. Connect to your Arduino project wirelessly, enabling efficient and responsive control.
